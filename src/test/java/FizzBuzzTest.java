@@ -1,18 +1,19 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class FizzBuzzTest {
+    
     private FizzBuzz fizzBuzz;
 
     @BeforeEach
     void setUp() {
+        
         fizzBuzz=new FizzBuzz();
     }
+    
     @Test
     void shouldPrintSameValueIfInputIsOne()  {
 
@@ -37,8 +38,6 @@ public class FizzBuzzTest {
         assertThat(fizzBuzz.printFizzBuzz(15),is("FizzBuzz"));
     }
 
-
-
     @Test
     void shouldPrintExceptionIfInputIsGreaterThanHundredOrLessThanOne() {
 
@@ -62,6 +61,5 @@ public class FizzBuzzTest {
 
         assertThat(fizzBuzz.printFizzBuzz(53),is("FizzBuzz"));
     }
-
 
 }
